@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Priorit Assessoria Contábil LTDA | Contabilidade em Campinas</title>
+
+    <meta name="description" content="Priorit Assessoria Contábil LTDA. Soluções contábeis, fiscais e empresariais para sua empresa em Campinas e região.">
+    <meta name="keywords" content="contabilidade Campinas, contador Campinas, assessoria contábil, Priorit Contabilidade, escritório contábil">
+    <meta name="author" content="Priorit Assessoria Contábil LTDA">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0b3d5c;
+            --primary-dark: #062b41;
+            --secondary: #16a085;
+            --accent: #24c59a;
+            --light: #f5f9fb;
+            --dark: #172b3a;
+            --text: #607080;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            color: var(--primary) !important;
+            font-size: 1.35rem;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: #3e5060 !important;
+            font-weight: 500;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+
+        .btn-primary-custom {
+            background: var(--secondary);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary-custom:hover {
+            background: #11866f;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid rgba(255,255,255,.8);
+            color: white;
+            padding: 10px 23px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 700px;
+            padding: 150px 0 100px;
+            background:
+                linear-gradient(115deg, rgba(6,43,65,.98), rgba(11,61,92,.88)),
+                url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80')
+                center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(36,197,154,.15);
+            border: 1px solid rgba(36,197,154,.4);
+            padding: 8px 15px;
+            border-radius: 50px;
+            color: #70e3c1;
+            font-size: .9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 4.4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #48d5ad;
+        }
+
+        .hero p {
+            color: rgba(255,255,255,.82);
+            font-size: 1.12rem;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,.09);
+            border: 1px solid rgba(255,255,255,.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        .hero-card i {
+            font-size: 2.5rem;
+            color: #48d5ad;
+        }
+
+        /* STATS */
+        .stats {
+            margin-top: -55px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            height: 100%;
+            box-shadow: 0 10px 35px rgba(11,61,92,.10);
+            border: 1px solid #edf2f5;
+        }
+
+        .stat-card i {
+            font-size: 1.7rem;
+            color: var(--secondary);
+        }
+
+        .stat-card h4 {
+            margin-top: 10px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-card p {
+            margin: 0;
+            color: var(--text);
+            font-size: .9rem;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: .8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            color: var(--text);
+            max-width: 700px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #fff;
+        }
+
+        .about-box {
+            background: var(--light);
+            border-radius: 20px;
+            padding: 35px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .check-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .check-item i {
+            color: var(--secondary);
+            font-size: 1.25rem;
+        }
+
+        .about-image {
+            min-height: 450px;
+            border-radius: 22px;
+            background:
+                linear-gradient(rgba(11,61,92,.2), rgba(11,61,92,.35)),
+                url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80')
+                center/cover;
+        }
+
+        /* SERVICES */
+        .services {
+            background: var(--light);
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e8eef2;
+            border-radius: 16px;
+            padding: 30px;
+            height: 100%;
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(11,61,92,.10);
+            border-color: transparent;
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 14px;
+            background: rgba(22,160,133,.10);
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h4 {
+            color: var(--primary);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text);
+            font-size: .92rem;
+            margin-bottom: 0;
+        }
+
+        /* DIFFERENTIALS */
+        .differentials {
+            background: white;
+        }
+
+        .difference-card {
+            padding: 25px;
+            border-radius: 15px;
+            background: white;
+            height: 100%;
+        }
+
+        .difference-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #e8f4f1;
+            line-height: 1;
+        }
+
+        .difference-card h4 {
+            color: var(--primary);
+            font-weight: 700;
+            margin-top: -8px;
+        }
+
+        /* COMPANY */
+        .company {
+            background: var(--light);
+        }
+
+        .company-info {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 5px 25px rgba(0,0,0,.04);
+        }
+
+        .info-row {
+            display: flex;
+            gap: 15px;
+            padding: 14px 0;
+            border-bottom: 1px solid #edf0f2;
+        }
+
+        .info-row:last-child {
+            border-bottom: 0;
+        }
+
+        .info-row i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+
+        .info-label {
+            display: block;
+            color: #8897a3;
+            font-size: .78rem;
+        }
+
+        .info-value {
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* CTA */
+        .cta {
+            background:
+                linear-gradient(110deg, var(--primary-dark), var(--primary));
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.78);
+        }
+
+        /* CONTACT */
+        .contact-card {
+            border: 1px solid #e8eef2;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+        }
+
+        .contact-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eaf8f4;
+            color: var(--secondary);
+            border-radius: 12px;
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        /* MAP */
+        .map-wrapper {
+            border-radius: 20px;
+            overflow: hidden;
+            height: 420px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #061e2d;
+            color: rgba(255,255,255,.7);
+            padding: 60px 0 25px;
+        }
+
+        footer h5 {
+            color: white;
+            font-weight: 700;
+        }
+
+        footer .brand {
+            color: white;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        footer .brand span {
+            color: var(--accent);
+        }
+
+        footer a {
+            color: rgba(255,255,255,.65);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.08);
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: .85rem;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            z-index: 999;
+            box-shadow: 0 7px 25px rgba(37,211,102,.35);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            color: white;
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-card {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            section {
+                padding: 70px 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats {
+                margin-top: 0;
+                padding-top: 20px;
+            }
+
+            .about-image {
+                min-height: 300px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            PRIORIT<span>.</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+            aria-controls="menu"
+            aria-expanded="false"
+            aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Início</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre nós</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#empresa">Empresa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a href="https://wa.me/5519992160072"
+                       target="_blank"
+                       class="btn btn-primary-custom">
+                        <i class="bi bi-whatsapp me-1"></i>
+                        Fale conosco
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <div class="hero-badge">
+                    <i class="bi bi-patch-check-fill"></i>
+                    Assessoria Contábil em Campinas
+                </div>
+
+                <h1>
+                    Contabilidade que
+                    <span>entende o seu negócio.</span>
+                </h1>
+
+                <p>
+                    Soluções contábeis inteligentes para empresas que buscam
+                    organização, segurança e melhores resultados.
+                    Conte com a Priorit para cuidar da sua contabilidade
+                    enquanto você concentra esforços no crescimento da sua empresa.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#contato" class="btn btn-primary-custom">
+                        Solicite uma avaliação
+                        <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+
+                    <a href="https://wa.me/5519992160072"
+                       target="_blank"
+                       class="btn btn-outline-custom">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="hero-card">
+
+                    <i class="bi bi-bar-chart-line-fill"></i>
+
+                    <h3 class="mt-3 fw-bold">
+                        Mais tranquilidade para sua empresa
+                    </h3>
+
+                    <p class="mb-0">
+                        Acompanhamento contábil, fiscal e empresarial
+                        para ajudar sua empresa a tomar decisões com
+                        mais segurança.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-building"></i>
+                    <h4>Empresa Ativa</h4>
+                    <p>Regularmente constituída e em atividade</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-geo-alt"></i>
+                    <h4>Campinas - SP</h4>
+                    <p>Atendimento empresarial</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-file-earmark-check"></i>
+                    <h4>Simples Nacional</h4>
+                    <p>Empresa optante pelo Simples</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-shield-check"></i>
+                    <h4>Assessoria</h4>
+                    <p>Contabilidade e suporte empresarial</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= SOBRE ================= -->
+<section class="about" id="sobre">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image"></div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="section-label">Sobre a Priorit</div>
+
+                <h2 class="section-title">
+                    Seu negócio em boas mãos.
+                </h2>
+
+                <p class="section-description mt-4">
+                    A <strong>Priorit Assessoria Contábil LTDA</strong>
+                    oferece serviços de contabilidade e assessoria para
+                    empresas que precisam de praticidade, organização e
+                    confiança para administrar seus negócios.
+                </p>
+
+                <p class="section-description">
+                    Nosso objetivo é transformar a contabilidade em uma
+                    ferramenta estratégica para apoiar o crescimento,
+                    planejamento e tomada de decisões.
+                </p>
+
+                <div class="about-box mt-4">
+
+                    <div class="check-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Atendimento próximo e personalizado</span>
+                    </div>
+
+                    <div class="check-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Informações claras para sua empresa</span>
+                    </div>
+
+                    <div class="check-item">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Organização contábil e fiscal</span>
+                    </div>
+
+                    <div class="check-item mb-0">
+                        <i class="bi bi-check-circle-fill"></i>
+                        <span>Foco na segurança e no crescimento empresarial</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="services" id="servicos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Nossos serviços
+            </div>
+
+            <h2 class="section-title">
+                Soluções para sua empresa
+            </h2>
+
+            <p class="section-description mx-auto mt-3">
+                Conte com uma assessoria completa para manter sua empresa
+                organizada e preparada para crescer.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <h4>Contabilidade</h4>
+
+                    <p>
+                        Escrituração e acompanhamento contábil para manter
+                        sua empresa organizada e com informações confiáveis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-receipt"></i>
+                    </div>
+
+                    <h4>Fiscal e Tributário</h4>
+
+                    <p>
+                        Apoio na rotina fiscal e tributária, contribuindo
+                        para o correto cumprimento das obrigações da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Departamento Pessoal</h4>
+
+                    <p>
+                        Suporte nas rotinas relacionadas aos colaboradores,
+                        folha de pagamento e obrigações trabalhistas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Planejamento Empresarial</h4>
+
+                    <p>
+                        Informações contábeis para auxiliar sua empresa
+                        no planejamento e na tomada de decisões.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </div>
+
+                    <h4>Obrigações Acessórias</h4>
+
+                    <p>
+                        Organização e acompanhamento das obrigações
+                        necessárias para manter sua empresa regular.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+
+                    <h4>Assessoria Contábil</h4>
+
+                    <p>
+                        Orientação personalizada para você compreender
+                        melhor os números e desafios do seu negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DIFERENCIAIS ================= -->
+<section class="differentials">
+
+    <div class="container">
+
+        <div class="row mb-5">
+
+            <div class="col-lg-7">
+
+                <div class="section-label">
+                    Por que escolher a Priorit?
+                </div>
+
+                <h2 class="section-title">
+                    Mais do que números.
+                    Estratégia para o seu negócio.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="difference-card">
+
+                    <div class="difference-number">01</div>
+
+                    <h4>Proximidade</h4>
+
+                    <p class="text-muted">
+                        Atendimento próximo para entender as necessidades
+                        reais de cada empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="difference-card">
+
+                    <div class="difference-number">02</div>
+
+                    <h4>Organização</h4>
+
+                    <p class="text-muted">
+                        Processos organizados para facilitar a rotina
+                        administrativa e contábil.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="difference-card">
+
+                    <div class="difference-number">03</div>
+
+                    <h4>Clareza</h4>
+
+                    <p class="text-muted">
+                        Comunicação simples para você entender melhor
+                        as informações da sua empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="difference-card">
+
+                    <div class="difference-number">04</div>
+
+                    <h4>Segurança</h4>
+
+                    <p class="text-muted">
+                        Acompanhamento das rotinas contábeis para contribuir
+                        com a regularidade do seu negócio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h2>
+                    Vamos cuidar da contabilidade
+                    da sua empresa?
+                </h2>
+
+                <p class="mt-3 mb-0">
+                    Fale com a Priorit Assessoria Contábil e descubra
+                    como podemos ajudar sua empresa.
+                </p>
+
+            </div>
+
+            <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+
+                <a href="https://wa.me/5519992160072"
+                   target="_blank"
+                   class="btn btn-primary-custom btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i>
+                    Falar pelo WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EMPRESA ================= -->
+<section class="company" id="empresa">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Informações da empresa
+            </div>
+
+            <h2 class="section-title">
+                Conheça a Priorit
+            </h2>
+
+            <p class="section-description mx-auto mt-3">
+                Dados cadastrais e informações institucionais da
+                Priorit Assessoria Contábil LTDA.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="company-info">
+
+                    <h4 class="fw-bold mb-3" style="color:var(--primary);">
+                        Dados cadastrais
+                    </h4>
+
+                    <div class="info-row">
+                        <i class="bi bi-building"></i>
+                        <div>
+                            <span class="info-label">Razão Social</span>
+                            <span class="info-value">
+                                Priorit Assessoria Contábil LTDA
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-card-text"></i>
+                        <div>
+                            <span class="info-label">CNPJ</span>
+                            <span class="info-value">
+                                52.200.911/0001-66
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-calendar-check"></i>
+                        <div>
+                            <span class="info-label">Data de abertura</span>
+                            <span class="info-value">
+                                15/09/2023
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-briefcase"></i>
+                        <div>
+                            <span class="info-label">Porte</span>
+                            <span class="info-value">
+                                Empresa de Pequeno Porte
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-diagram-3"></i>
+                        <div>
+                            <span class="info-label">Natureza Jurídica</span>
+                            <span class="info-value">
+                                Sociedade Empresária Limitada
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-check-circle"></i>
+                        <div>
+                            <span class="info-label">Situação cadastral</span>
+                            <span class="info-value text-success">
+                                Ativa
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="company-info">
+
+                    <h4 class="fw-bold mb-3" style="color:var(--primary);">
+                        Informações fiscais e atividade
+                    </h4>
+
+                    <div class="info-row">
+                        <i class="bi bi-percent"></i>
+                        <div>
+                            <span class="info-label">Regime tributário</span>
+                            <span class="info-value">
+                                Simples Nacional
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-calendar2-check"></i>
+                        <div>
+                            <span class="info-label">Opção pelo Simples</span>
+                            <span class="info-value">
+                                15/09/2023
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-cash-stack"></i>
+                        <div>
+                            <span class="info-label">Capital Social</span>
+                            <span class="info-value">
+                                R$ 3.000,00
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-diagram-2"></i>
+                        <div>
+                            <span class="info-label">Tipo</span>
+                            <span class="info-value">
+                                Matriz
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-journal-text"></i>
+                        <div>
+                            <span class="info-label">CNAE Principal</span>
+                            <span class="info-value">
+                                69.20-6-01
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <i class="bi bi-calculator"></i>
+                        <div>
+                            <span class="info-label">Atividade principal</span>
+                            <span class="info-value">
+                                Atividades de contabilidade
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTATO ================= -->
+<section id="contato">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <div class="section-label">
+                Entre em contato
+            </div>
+
+            <h2 class="section-title">
+                Estamos prontos para ajudar
+            </h2>
+
+            <p class="section-description mx-auto mt-3">
+                Escolha o canal de atendimento que for mais conveniente
+                para você.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        WhatsApp
+                    </h5>
+
+                    <p class="text-muted">
+                        Fale diretamente com nossa equipe.
+                    </p>
+
+                    <a href="https://wa.me/5519992160072"
+                       target="_blank">
+                        (19) 99216-0072
+                    </a>
+
+                    <br>
+
+                    <a href="https://wa.me/5519998242255"
+                       target="_blank">
+                        (19) 99824-2255
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        E-mail
+                    </h5>
+
+                    <p class="text-muted">
+                        Envie sua mensagem por e-mail.
+                    </p>
+
+                    <a href="mailto:priorit@prioritcontabilidade.com.br">
+                        priorit@prioritcontabilidade.com.br
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h5 class="fw-bold">
+                        Endereço
+                    </h5>
+
+                    <p class="text-muted mb-0">
+                        Avenida Papa Pio XII, 847<br>
+                        Sala 16 - Jardim Chapadão<br>
+                        Campinas - SP<br>
+                        CEP 13070-091
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAPA -->
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <div class="section-label">
+                    Onde estamos
+                </div>
+
+                <h2 class="section-title">
+                    Visite nosso escritório
+                </h2>
+
+                <p class="text-muted mt-3">
+                    Estamos localizados no Jardim Chapadão,
+                    em Campinas - São Paulo.
+                </p>
+
+                <div class="mt-4">
+
+                    <p>
+                        <i class="bi bi-geo-alt-fill me-2"
+                           style="color:var(--secondary);"></i>
+
+                        Avenida Papa Pio XII, 847 - Sala 16
+                    </p>
+
+                    <p>
+                        <i class="bi bi-building me-2"
+                           style="color:var(--secondary);"></i>
+
+                        Jardim Chapadão - Campinas/SP
+                    </p>
+
+                    <p>
+                        <i class="bi bi-mailbox me-2"
+                           style="color:var(--secondary);"></i>
+
+                        CEP: 13070-091
+                    </p>
+
+                </div>
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Avenida+Papa+Pio+XII+847+Campinas+SP+13070-091"
+                    target="_blank"
+                    class="btn btn-primary-custom mt-2">
+
+                    <i class="bi bi-map me-2"></i>
+                    Abrir no Google Maps
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="map-wrapper">
+
+                    <iframe
+                        src="https://www.google.com/maps?q=Avenida%20Papa%20Pio%20XII%20847%20Campinas%20SP%2013070-091&output=embed"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="brand">
+                    PRIORIT<span>.</span>
+                </div>
+
+                <p class="mt-3">
+                    Priorit Assessoria Contábil LTDA.
+                    Soluções contábeis para empresas que buscam
+                    organização, segurança e crescimento.
+                </p>
+
+                <p class="small mb-0">
+                    CNPJ: 52.200.911/0001-66
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-3">
+
+                <h5>Links rápidos</h5>
+
+                <ul class="list-unstyled mt-3">
+
+                    <li class="mb-2">
+                        <a href="#inicio">Início</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#sobre">Sobre nós</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#servicos">Serviços</a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#empresa">Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#contato">Contato</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="col-6 col-lg-4">
+
+                <h5>Contato</h5>
+
+                <div class="mt-3">
+
+                    <p class="mb-2">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        (19) 99216-0072
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        (19) 99824-2255
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        priorit@prioritcontabilidade.com.br
+                    </p>
+
+                    <p class="mb-0">
+                        <i class="bi bi-geo-alt me-2"></i>
+                        Campinas - SP
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom text-center">
+
+            <p class="mb-1">
+                © 2026 Priorit Assessoria Contábil LTDA.
+                Todos os direitos reservados.
+            </p>
+
+            <small>
+                CNPJ 52.200.911/0001-66 · Atividades de contabilidade
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= WHATSAPP FLUTUANTE ================= -->
+
+<a
+    href="https://wa.me/5519992160072?text=Olá!%20Gostaria%20de%20conhecer%20os%20serviços%20da%20Priorit%20Assessoria%20Contábil."
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Falar pelo WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+</a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
